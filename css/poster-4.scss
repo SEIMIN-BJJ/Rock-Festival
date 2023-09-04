@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
+  }
+}
+
+@mixin pc {
+
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
+
+@include pc {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    background-color: #ECE93B;
+    font-family: 'Permanent Marker', cursive;
+    @include flex(flex, center, center);
+
+    .chad {
+
+      width: 50vw;
+      height: 18vh;
+      margin-top: -25vw;
+      margin-left: -55vw;
+      font-size: 3vw;
+      z-index: 1;
+      cursor: pointer;
+
+      @include flex(flex, center, center);
+
+
+    }
+
+    .movie {
+      width: 50vw;
+      margin-bottom: -5vw;
+      border: 5px solid white;
+      border-radius: 10px;
+      margin-right: -42vw;
+      margin-top: -10vh;
+      position: absolute;
+      z-index: 2;
+      @include flex(flex, center, center);
+
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
+    }
+
+    .pic>div {
+      width: 30vw;
+      height: 50vh;
+      margin-top: -12.2vw;
+      margin-left: -40vw;
+      position: absolute;
+      background: url(../pic/hand-2.jpg);
+      background-size: cover;
+      z-index: 0;
+    }
+  }
+}
+
+@include mobile {
+
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #ECE93B;
+    transition: 1s;
+    font-family: 'Permanent Marker', cursive;
+    @include flex(flex, center, center);
+
+    .chad {
+
+      width: 100vw;
+      height: 20vh;
+      margin-top: -70vh;
+      font-size: 8vw;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .pic>div {
+      width: 70vw;
+      height: 30vh;
+      position: absolute;
+      background: url(../pic/hand-2.jpg);
+      background-size: contain;
+      flex-direction: column;
+      background-position: center center;
+      background-attachment:initial;
+      background-repeat: no-repeat; 
+      z-index: 0;
+      margin-top: -36vh;
+      margin-left: -85vw;
+    }
+
+    .movie {
+      width: 90vw;
+      height: 26vh;
+      margin-bottom: -50vw;
+      border: 5px solid white;
+      border-radius: 10px;
+      position: absolute;
+      z-index: 2;
+      overflow: hidden;
+      @include flex(flex, center, center);
+
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
+    }
+
+    }
+
+
+  }

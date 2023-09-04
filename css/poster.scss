@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media (max-width:575px) {
+    @content;
+  }
+}
+
+@mixin pc {
+
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
+
+body::-webkit-scrollbar {
+
+  width: 0;
+  display: none;
+}
+
+@include pc {
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+  #root {
+    width: 100vw;
+    height: 200vh;
+    background-color: #ECE93B;
+    position: absolute;
+    @include flex(flex, center, center);
+
+
+    .eq {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: 0;
+      filter: blur(1px);
+      @include flex(flex, center, center);
+    }
+
+    .eq-bar {
+      width: 4.5vw;
+      flex-direction: column-reverse;
+      @include flex(flex, center, center);
+
+      span {
+        width: 3vw;
+        height: 11vh;
+        transition: .2s ease all;
+        opacity: 1;
+
+        @include flex(flex, center, center);
+
+      }
+
+
+      &:nth-child(1) span {
+        background: #fc0127;
+      }
+
+      &:nth-child(2) span {
+        background: #fb0275;
+      }
+
+      &:nth-child(3) span {
+        background: #b50cd3;
+      }
+
+      &:nth-child(4) span {
+        background: #6407e9;
+      }
+
+      &:nth-child(5) span {
+        background: #2a06a9;
+      }
+
+      &:nth-child(6) span {
+        background: #080ad7;
+      }
+
+      &:nth-child(7) span {
+        background: #0265e2;
+      }
+
+      &:nth-child(8) span {
+        background: #03fcfc;
+      }
+
+      &:nth-child(9) span {
+        background: #02fe46;
+      }
+
+      &:nth-child(10) span {
+        background: #05fb0f;
+      }
+
+      &:nth-child(11) span {
+        background: #97f611;
+      }
+
+      &:nth-child(12) span {
+        background: #f5e506;
+      }
+
+      &:nth-child(13) span {
+        background: #d7a414;
+      }
+
+      &:nth-child(14) span {
+        background: #fc6b02;
+      }
+
+      &:nth-child(15) span {
+        background: #df1506;
+      }
+
+      &:nth-child(16) span {
+        background: #e21818;
+      }
+      &:nth-child(17) span {
+        background: #4d4481;
+      }
+      &:nth-child(18) span {
+        background: #4739c2;
+      }
+      &:nth-child(19) span {
+        background: #9e98d4;
+      }
+      &:nth-child(20) span {
+        background: #34305e;
+      }
+
+    }
+
+    .box1 {
+      flex-direction: column;
+      margin: 7vw;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box1>div {
+
+      margin: 7vh;
+      background-size: contain;
+      border-radius: 20px;
+      z-index: 1;
+      @include flex(flex, center, center);
+      cursor: pointer;
+
+    }
+
+    .box2 {
+
+      width: 8vw;
+      height: 200vh;
+      background-color: #fff;
+      font-size: 5vw;
+      font-family: 'Permanent Marker', cursive;
+      writing-mode: vertical-rl;
+      z-index: 1;
+      cursor: pointer;
+      @include flex(flex, center, center);
+
+    }
+
+    .box3 {
+      flex-direction: column;
+      z-index: 1;
+      margin: 7vw;
+      @include flex(flex, center, center);
+
+    }
+
+    .box3>div {
+      margin: 7vh;
+      background-size: contain;
+      border-radius: 20px;
+      z-index: 1;
+      @include flex(flex, center, center);
+      cursor: pointer;
+
+    }
+
+    //---------------------------------------
+
+    .pic1 {
+      width: 18.5vw;
+      height: 36.7vh;
+      background: url(../pic/redhot.jpg);
+      background-size: auto;
+    }
+
+    .pic2 {
+      width: 17.9vw;
+      height: 35.7vh;
+      background: url(../pic/cross.jpg);
+    }
+
+    .pic3 {
+      width: 17.5vw;
+      height: 35vh;
+      background: url(../pic/asking.jpg);
+    }
+
+    .pic4 {
+      width: 18vw;
+      height: 28vh;
+      background: url(../pic/maxi.jpg);
+    }
+
+    .pic5 {
+      width: 17.7vw;
+      height: 35vh;
+      background: url(../pic/crys.jpg);
+    }
+
+    .pic6 {
+      width: 18.7vw;
+      height: 36.8vh;
+      background: url(../pic/ringo.jpg);
+    }
+
+    .pic7 {
+      width: 18.7vw;
+      height: 36.7vh;
+      background: url(../pic/fear.jpg);
+    }
+
+    .pic8 {
+      width: 17vw;
+      height: 28.7vh;
+      background: url(../pic/soil.jpg);
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------
+
+
+@include mobile {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ECE93B;
+    position: absolute;
+    @include flex(flex, center, center);
+
+
+    .eq {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: 0;
+      filter: blur(1px);
+      @include flex(flex, center, center);
+    }
+
+    .eq-bar {
+      width: 6vw;
+      flex-direction: column-reverse;
+      @include flex(flex, center, center);
+
+      span {
+        width: 4vw;
+        height: 5.5vh;
+        transition: .2s ease all;
+        opacity: 1;
+        @include flex(flex, center, center);
+
+      }
+
+
+      &:nth-child(1) span {
+        background: #fc0127;
+      }
+
+      &:nth-child(2) span {
+        background: #fb0275;
+      }
+
+      &:nth-child(3) span {
+        background: #b50cd3;
+      }
+
+      &:nth-child(4) span {
+        background: #6407e9;
+      }
+
+      &:nth-child(5) span {
+        background: #2a06a9;
+      }
+
+      &:nth-child(6) span {
+        background: #080ad7;
+      }
+
+      &:nth-child(7) span {
+        background: #0265e2;
+      }
+
+      &:nth-child(8) span {
+        background: #03fcfc;
+      }
+
+      &:nth-child(9) span {
+        background: #02fe46;
+      }
+
+      &:nth-child(10) span {
+        background: #05fb0f;
+      }
+
+      &:nth-child(11) span {
+        background: #97f611;
+      }
+
+      &:nth-child(12) span {
+        background: #f5e506;
+      }
+
+      &:nth-child(13) span {
+        background: #d7a414;
+      }
+
+      &:nth-child(14) span {
+        background: #fc6b02;
+      }
+
+      &:nth-child(15) span {
+        background: #df1506;
+      }
+      
+      &:nth-child(16) span {
+        background: #e21818;
+      }
+      
+      &:nth-child(17) span {
+        background: #4d4481;
+      }
+
+      &:nth-child(18) span {
+        background: #4739c2;
+      }
+      
+      &:nth-child(19) span {
+        background: #9e98d4;
+      }
+      
+      &:nth-child(20) span {
+        background: #34305e;
+      }
+
+    }
+
+    .box1 {
+      width: 50vw;
+      height: 90vh;
+      flex-direction: column;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box1>div {
+      margin: 4vh;
+      background-size: cover;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat; 
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box2 {
+
+      width: 50vw;
+      height: 100vh;
+      background-color: #fff;
+      font-size: 8vw;
+      font-family: 'Permanent Marker', cursive;
+      writing-mode: vertical-rl;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box3 {
+      width: 100vw;
+      height: 90vh;
+      flex-direction: column;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box3>div {
+      margin: 4vh;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat; 
+      border-radius: 20px;
+      z-index: 1;
+      @include flex(flex, center, center);
+      cursor: pointer;
+
+    }
+
+    //---------------------------------------
+
+    .pic1 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/redhot.jpg);
+    }
+
+    .pic2 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/cross.jpg);
+    }
+
+    .pic3 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/asking.jpg);
+    }
+
+    .pic4 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/maxi.jpg);
+    }
+
+    .pic5 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/crys.jpg);
+    }
+
+    .pic6 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/ringo.jpg);
+    }
+
+    .pic7 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/fear.jpg);
+    }
+
+    .pic8 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/soil.jpg);
+    }
+  }
+}
