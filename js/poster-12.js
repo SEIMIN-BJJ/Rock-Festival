@@ -6,7 +6,7 @@ prev.addEventListener("click", function () {
 
 const next = document.querySelector(".next");
 next.addEventListener("click", function () {
-  let page = "https://seimin-bjj.github.io/PortFolio-R/";
+  let page = "https://seimin-bjj.github.io/PTF-retro/";
   location.href = page;
 });
 
