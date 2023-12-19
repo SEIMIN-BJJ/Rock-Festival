@@ -18,8 +18,8 @@ body::-webkit-scrollbar {
     width: 100vw;
     height: 100vh;
     transition: 1s;
-    background-color: #ECE93B;
-    font-family: "Permanent Marker", cursive;
+    background-color: #ece93c;
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -91,13 +91,14 @@ body::-webkit-scrollbar {
     align-items: center;
   }
 }
+
 @media all and (max-width: 800px) {
   #root {
     width: 100vw;
     height: 100vh;
     transition: 1s;
     background-color: #ECE93B;
-    font-family: "Permanent Marker", cursive;
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     display: flex;
     justify-content: center;

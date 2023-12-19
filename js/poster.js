@@ -15,7 +15,7 @@ function setRandomBars(maxBarHeight) {
     for (let j = 0; j < spans.length; j++) {
 
       if (newHeight > activeSpanCount) {
-        spans[j].style.opacity = '1';
+        spans[j].style.opacity = '0.5';
       } else if (j > newHeight) {
         spans[j].style.opacity = '0';
       }
@@ -63,7 +63,7 @@ function addBarSpans() {
 
 const box = document.querySelector('.box2');
 box.addEventListener('click', function () {
-  let page = './html/poster-1.html';
+  let page = './html/poster-12.html';
   location.href = page;
 });
 

@@ -58,7 +58,7 @@ body::-webkit-scrollbar {
   #root .eq-bar span {
     width: 3vw;
     height: 11vh;
-    transition: 0.2s ease all;
+    transition: .2s ease all;
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -147,7 +147,7 @@ body::-webkit-scrollbar {
     height: 200vh;
     background-color: #fff;
     font-size: 5vw;
-    font-family: "Permanent Marker", cursive;
+    font-family: 'Permanent Marker', cursive;
     writing-mode: vertical-rl;
     z-index: 1;
     cursor: pointer;
@@ -215,6 +215,7 @@ body::-webkit-scrollbar {
     background: url(../pic/soil.jpg);
   }
 }
+
 @media (max-width: 575px) {
   html, body {
     max-width: 100%;
@@ -260,7 +261,7 @@ body::-webkit-scrollbar {
   #root .eq-bar span {
     width: 4vw;
     height: 5.5vh;
-    transition: 0.2s ease all;
+    transition: .2s ease all;
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -356,7 +357,7 @@ body::-webkit-scrollbar {
     height: 100vh;
     background-color: #fff;
     font-size: 8vw;
-    font-family: "Permanent Marker", cursive;
+    font-family: 'Permanent Marker', cursive;
     writing-mode: vertical-rl;
     z-index: 1;
     display: flex;
