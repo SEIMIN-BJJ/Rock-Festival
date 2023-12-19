@@ -226,7 +226,8 @@ body::-webkit-scrollbar {
       width: 18.5vw;
       height: 36.7vh;
       background: url(../pic/redhot.jpg);
-      background-size: auto;
+      background-size: contain;
+      background-position: no-repeat;
     }
 
     .pic2 {

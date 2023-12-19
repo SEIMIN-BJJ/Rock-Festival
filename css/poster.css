@@ -178,41 +178,56 @@ body::-webkit-scrollbar {
     height: 36.7vh;
     background: url(../pic/redhot.jpg);
     background-size: auto;
+    background-repeat: no-repeat;
   }
   #root .pic2 {
     width: 17.9vw;
     height: 35.7vh;
     background: url(../pic/cross.jpg);
+    background-repeat: no-repeat;
+
   }
   #root .pic3 {
     width: 17.5vw;
     height: 35vh;
     background: url(../pic/asking.jpg);
+    background-repeat: no-repeat;
+
   }
   #root .pic4 {
     width: 18vw;
     height: 28vh;
     background: url(../pic/maxi.jpg);
+    background-repeat: no-repeat;
+
   }
   #root .pic5 {
     width: 17.7vw;
     height: 35vh;
     background: url(../pic/crys.jpg);
+    background-repeat: no-repeat;
+
   }
   #root .pic6 {
     width: 18.7vw;
     height: 36.8vh;
     background: url(../pic/ringo.jpg);
+    background-repeat: no-repeat;
+
   }
   #root .pic7 {
     width: 18.7vw;
     height: 36.7vh;
     background: url(../pic/fear.jpg);
+    background-repeat: no-repeat;
+
   }
   #root .pic8 {
     width: 17vw;
     height: 28.7vh;
     background: url(../pic/soil.jpg);
+    background-repeat: no-repeat;
+
   }
 }
 
